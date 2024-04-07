@@ -1,0 +1,13 @@
+services:
+- type: web
+  name: my-api
+  env: node
+  plan: starter
+  buildCommand: npm install
+  startCommand: npm start
+  envVars:
+  - key: MONGO_URI
+    sync: false
+  - key: PORT
+    value: '10000'
+    sync: false
